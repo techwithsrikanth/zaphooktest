@@ -6,7 +6,11 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-app.use(cors()); // Enable CORS for all origins
+
+// Enable CORS for all origins (or specify your frontend origin)
+app.use(cors({
+    origin: 'https://preview--frosting-fantasy-creations.lovable.app', // specify your frontend's origin here
+  }));
 app.use(express.json());
 
 // Set up Google Sheets API authentication
