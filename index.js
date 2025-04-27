@@ -1,7 +1,9 @@
 const express = require('express');
 const fetch = require('node-fetch');
+const cors = require('cors'); // Import the cors module
 const app = express();
 
+app.use(cors()); // Enable CORS for all origins
 app.use(express.json());
 
 app.post('/submit-order', async (req, res) => {
