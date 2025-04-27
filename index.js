@@ -29,7 +29,7 @@ const auth = new google.auth.GoogleAuth({
 const SPREADSHEET_ID = '188h_2rUCNihZqmvU6855finY9j7VB0HgoPIhhHIennI'; // Replace with your actual spreadsheet ID
 
 // Endpoint to submit the order
-app.post('/submit-order', async (req, res) => {
+app.post('api/submit-order', async (req, res) => {
   try {
     // Authenticate the client
     const authClient = await auth.getClient();
