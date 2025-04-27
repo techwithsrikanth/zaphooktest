@@ -4,6 +4,8 @@ const cors = require('cors');
 const { google } = require('googleapis'); // Import googleapis to interact with Google Sheets
 const fs = require('fs');
 const path = require('path');
+const dotenv = require('dotenv');  // Import dotenv
+dotenv.config();  // Load environment variables from .env
 
 const app = express();
 
